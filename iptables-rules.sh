@@ -1,4 +1,16 @@
 #!/bin/bash
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60660 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60661 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60662 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60663 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60664 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60665 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60666 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60667 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60668 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60669 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60670 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60671 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60672 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60673 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60674 -j ACCEPT
@@ -31,4 +43,5 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 6665 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 6665 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 60124 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 60124 -j ACCEPT
+
 service iptables save
