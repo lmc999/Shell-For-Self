@@ -2,6 +2,5 @@
 yum install wget -y
 yum install unzip -y
 yum install mtr -y
-wget https://cdn.ipip.net/17mon/besttrace4linux.zip
-unzip besttrace4linux.zip
+wget https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/besttrace
 chmod +x besttrace
