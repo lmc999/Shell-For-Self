@@ -2,10 +2,10 @@
 
 
 # ====================================================
-#	System Request:CentOS 6+ 、Debian 7+、Ubuntu 14+
-#	Author:	lmc999
-#	Dscription: Wireguard配置脚本
-#	Version: 1.0
+#       System Request:CentOS 6+ 、Debian 7+、Ubuntu 14+
+#       Author: lmc999
+#       Dscription: Wireguard配置脚本
+#       Version: 1.0
 # ====================================================
 
 Green="\033[32m"
@@ -27,22 +27,22 @@ set_interface(){
 
 start_wireguard(){
     wg-quick up ${iface}
-	sleep 1
-	wondershaper -a ${iface} -u 10240
+        sleep 1
+        wondershaper -a ${iface} -u 10240
 }
 
 stop_wireguard(){
     wg-quick down ${iface}
-	sleep 1
-	wondershaper -c -a ${iface}
+        sleep 1
+        wondershaper -c -a ${iface}
 }
 
 restart_wireguard(){
     wg-quick down ${iface}
-	wondershaper -c -a ${iface}
-	wg-quick up ${iface}
-	sleep 1
-	wondershaper -a ${iface} -u 10240
+        wondershaper -c -a ${iface}
+        wg-quick up ${iface}
+        sleep 1
+        wondershaper -a ${iface} -u 10240
 }
 
 start_menu(){
@@ -55,29 +55,29 @@ start_menu(){
     read -p "请输入数字:" num
     case "$num" in
     1)
-	rootness
-	set_interface
-	start_wireguard
-	;;
-	2)
-	rootness
-	set_interface
-	stop_wireguard
-	;;
-	3)
-	rootness
-	set_interface
-	restart_wireguard
-	;;
-	0)
-	exit 1
-	;;
-	*)
-	clear
-	echo "请输入正确数字"
-	sleep 5s
-	start_menu
-	;;
+        rootness
+        set_interface
+        start_wireguard
+        ;;
+        2)
+        rootness
+        set_interface
+        stop_wireguard
+        ;;
+        3)
+        rootness
+        set_interface
+        restart_wireguard
+        ;;
+        0)
+        exit 1
+        ;;
+        *)
+        clear
+        echo "请输入正确数字"
+        sleep 5s
+        start_menu
+        ;;
     esac
 }
 
