@@ -28,7 +28,7 @@ set_interface(){
 start_wireguard(){
     wg-quick up ${iface}
         sleep 1
-        wondershaper -a ${iface} -u 10240
+        wondershaper -a ${iface} -u 5120
 }
 
 stop_wireguard(){
@@ -42,7 +42,7 @@ restart_wireguard(){
         wondershaper -c -a ${iface}
         wg-quick up ${iface}
         sleep 1
-        wondershaper -a ${iface} -u 10240
+        wondershaper -a ${iface} -u 5120
 }
 
 start_menu(){
