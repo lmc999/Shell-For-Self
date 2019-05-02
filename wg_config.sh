@@ -47,9 +47,9 @@ restart_wireguard(){
 
 start_menu(){
     clear
-    echo "1. 启动Wireguard"
-    echo "2. 关闭wireguard"
-    echo "3. 重启wireguard"
+    echo "1. 启动Wireguard Interface"
+    echo "2. 关闭wireguard Interface"
+    echo "3. 重启wireguard Interface"
     echo "0. 退出脚本"
     echo
     read -p "请输入数字:" num
