@@ -56,16 +56,16 @@ config_udpspeeder(){
 
 start_udpspeeder(){
     echo -e "${Green}正在配置udpspeeder...${Font}"
-	nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 1 -k passwd >speeder.log 2>&1 &
+	nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 0 -k passwd >speeder.log 2>&1 &
     if [ "${OS}" == 'CentOS' ];then
         sed -i '/exit/d' /etc/rc.d/rc.local
-        echo "nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 1 -k passwd >speeder.log 2>&1 &" >> /etc/rc.d/rc.local
+        echo "nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 0 -k passwd >speeder.log 2>&1 &" >> /etc/rc.d/rc.local
 	echo "sleep 2
 	" >> /etc/rc.d/rc.local
         chmod +x /etc/rc.d/rc.local
     elif [ -s /etc/rc.local ]; then
         sed -i '/exit/d' /etc/rc.local
-        echo "nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 1 -k passwd >speeder.log 2>&1 &" >> /etc/rc.local
+        echo "nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 0 -k passwd >speeder.log 2>&1 &" >> /etc/rc.local
 	echo "sleep 2
 	" >> /etc/rc.local
         chmod +x /etc/rc.local
@@ -99,7 +99,7 @@ echo "#!/bin/sh -e
 #
 # By default this script does nothing.
 " > /etc/rc.local
-echo "nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 1 -k passwd >speeder.log 2>&1 &" >> /etc/rc.local
+echo "nohup speederv2 -c -l0.0.0.0:${port2} -r ${ip}:${port1} -f2:4 --mode 0 --timeout 0 -k passwd >speeder.log 2>&1 &" >> /etc/rc.local
 echo "sleep 2
 " >> /etc/rc.local
 chmod +x /etc/rc.local
