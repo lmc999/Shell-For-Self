@@ -48,11 +48,11 @@ cat > ${direction}/config.json<<-EOF
 {
 "server":"0.0.0.0",
 "server_port":${port},
+"local_port":1080,
 "password":"${password}",
-"timeout":300,
-"method":"aes-256-gcm",
+"timeout":60,
+"method":"chacha20-ietf-poly1305",
 "fast_open":false,
-"nameserver":"8.8.8.8",
 "mode":"tcp_and_udp"
 }
 
