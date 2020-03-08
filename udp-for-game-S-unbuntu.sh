@@ -31,13 +31,9 @@ curl -o udp2raw https://raw.githubusercontent.com/lmc999/OpenvpnForGames/master/
 chmod +x speederv2 udp2raw
 
 #启动udpspeeder和udp2raw
-nohup speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:11193 -f2:2 --mode 0 --timeout 0 >speeder.log 2>&1 &
-nohup udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:9999  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &
-nohup speederv2 -s -l0.0.0.0:8999 -r127.0.0.1:11931 -f2:2 --mode 0 --timeout 0 >speeder.log 2>&1 &
-nohup udp2raw -s -l0.0.0.0:8898 -r 127.0.0.1:8999  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &
+nohup speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:56789 -f2:4 --mode 0 --timeout 1 >speeder.log 2>&1 &
+nohup udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:9999  --raw-mode faketcp -a -k passwd --fix-gro >udp2raw.log 2>&1 &
 
 #增加自启动脚本
-echo "nohup speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:11193 -f2:4 --mode 0 --timeout 0 >speeder.log 2>&1 &" | sudo tee -a /etc/rc.local
-echo "nohup udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:9999  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &" | sudo tee -a /etc/rc.local
-echo "nohup speederv2 -s -l0.0.0.0:8999 -r127.0.0.1:11931 -f2:2 --mode 0 --timeout 0 >speeder.log 2>&1 &" | sudo tee -a /etc/rc.local
-echo "nohup udp2raw -s -l0.0.0.0:8898 -r 127.0.0.1:8999  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &" | sudo tee -a /etc/rc.local
+echo "nohup speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:56789 -f2:4 --mode 0 --timeout 1 >speeder.log 2>&1 &" | sudo tee -a /etc/rc.local
+echo "nohup udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:9999  --raw-mode faketcp -a -k passwd --fix-gro >udp2raw.log 2>&1 &" | sudo tee -a /etc/rc.local
