@@ -4,7 +4,7 @@
   "PrimaryDNS": [
     {
       "Name": "DNSPod",
-      "Address": "119.29.29.29:53",
+      "Address": "114.114.114.114:53",
       "Protocol": "udp",
       "SOCKS5Address": "",
       "Timeout": 6,
