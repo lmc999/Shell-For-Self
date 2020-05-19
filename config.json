@@ -42,7 +42,7 @@
   "DomainFile": {
     "Primary": "/etc/overture/domain_primary_sample",
     "Alternative": "/etc/overture/domain_alternative_sample",
-    "Matcher":  "full-map"
+    "Matcher":  "regex-list"
   },
   "HostsFile": {
     "HostsFile": "/etc/overture/hosts_sample",
