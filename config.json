@@ -50,6 +50,6 @@
   },
   "MinimumTTL": 0,
   "DomainTTLFile" : "/etc/overture/domain_ttl_sample",
-  "CacheSize" : 0,
+  "CacheSize" : 5000,
   "RejectQType": [255]
 }
