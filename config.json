@@ -3,15 +3,15 @@
   "DebugHTTPAddress": "127.0.0.1:5555",
   "PrimaryDNS": [
     {
-      "Name": "DNSPod",
-      "Address": "114.114.114.114:53",
+      "Name": "DNSPOD",
+      "Address": "119.29.29.29:53",
       "Protocol": "udp",
       "SOCKS5Address": "",
       "Timeout": 6,
       "EDNSClientSubnet": {
-        "Policy": "disable",
-        "ExternalIP": "",
-        "NoCookie": true
+        "Policy": "manual",
+        "ExternalIP": "212.64.18.1",
+        "NoCookie": false
       }
     }
   ],
@@ -25,7 +25,7 @@
       "EDNSClientSubnet": {
         "Policy": "disable",
         "ExternalIP": "",
-        "NoCookie": true
+        "NoCookie": false
       }
     }
   ],
@@ -42,7 +42,7 @@
   "DomainFile": {
     "Primary": "/etc/overture/domain_primary_sample",
     "Alternative": "/etc/overture/domain_alternative_sample",
-    "Matcher":  "regex-list"
+    "Matcher": "regex-list"
   },
   "HostsFile": {
     "HostsFile": "/etc/overture/hosts_sample",
@@ -50,6 +50,6 @@
   },
   "MinimumTTL": 0,
   "DomainTTLFile" : "/etc/overture/domain_ttl_sample",
-  "CacheSize" : 5000,
+  "CacheSize" : 0,
   "RejectQType": [255]
 }
