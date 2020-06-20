@@ -9,6 +9,8 @@
 
 > bash <(curl -L -s https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/trace.sh)
 
+> bash <(curl -L -s https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/tcping.sh)
+
 > bash <(curl -L -s https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/iptables-rules.sh)
 
 > wget https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/wg_config.sh && bash wg_config.sh
