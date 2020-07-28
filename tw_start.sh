@@ -2,7 +2,7 @@
 pid=$(ps -aux | grep tw.ovpn |grep -v grep |awk '!/#/{printf$2"\n"}')
 num=$1
 kill -9 $pid
-rm -rf /tmp/tw.ovpn /tmp/vpngate.txt
+rm -rf /tmp/tw.ovpn
 setup_config(){
 cat /etc/openvpn/tw/tw$num.ovpn >> /tmp/tw.ovpn
 
@@ -12,7 +12,7 @@ sed -i '/persist-tun/d' /tmp/tw.ovpn
 echo "route-nopull
 route 10.211.0.0 255.255.0.0
 dev tun2
-log-append /tmp/openvpn.log
+log-append /tmp/openvpn2.log
 up /etc/openvpn/tw_up.sh
 script-security 2
 reneg-sec 0" >> /tmp/tw.ovpn
@@ -35,3 +35,4 @@ iptables -A FORWARD -i tun2 -j ACCEPT
 
 
 
+cat /etc/openvpn/tw/tw${num}.ovpn >> /tmp/tw.ovpn
