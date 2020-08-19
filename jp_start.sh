@@ -8,7 +8,7 @@ curl http://www.vpngate.net/api/iphone/ > /tmp/vpngate.txt
 
 cat /tmp/vpngate.txt | grep Japan | grep -v Academic | cut -f15 -d"," |  awk NR==${num} > /tmp/jp.coded
 
-base64 -d /tmp/jp.coded > /tmp/jp.ovpn
+base64 -d /tmp/jp.coded > /tmp/jp.ovpn >/dev/null 2>&1
 dos2unix /tmp/jp.ovpn >/dev/null 2>&1
 
 sed -i '/persist-tun/d' /tmp/jp.ovpn
@@ -28,4 +28,4 @@ nohup openvpn --config /tmp/jp.ovpn >/dev/null 2>&1 &
 setup_config
 iptables -A INPUT -i tun0 -j ACCEPT
 iptables -A FORWARD -i tun0 -j ACCEPT
-nslookup api.abema.io
+nslookup api.abema.io >/dev/null 2>&1
