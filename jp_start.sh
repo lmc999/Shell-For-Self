@@ -28,3 +28,4 @@ nohup openvpn --config /tmp/jp.ovpn >/dev/null 2>&1 &
 setup_config
 iptables -A INPUT -i tun0 -j ACCEPT
 iptables -A FORWARD -i tun0 -j ACCEPT
+nslookup api.abema.io
