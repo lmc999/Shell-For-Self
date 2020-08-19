@@ -24,14 +24,7 @@ reneg-sec 0" >> /tmp/jp.ovpn
 nohup openvpn --config /tmp/jp.ovpn >/dev/null 2>&1 &
 }
 
-make_script(){
-sleep 5
-ip route add default via $(ip addr show tun0 | grep inet | awk '{print $4}' | cut -f1 -d"/" | awk 'NR==1') dev tun0 table media
-
-
-}
 
 setup_config
-make_script
 iptables -A INPUT -i tun0 -j ACCEPT
 iptables -A FORWARD -i tun0 -j ACCEPT
