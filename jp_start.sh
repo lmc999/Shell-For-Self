@@ -8,7 +8,7 @@ curl http://www.vpngate.net/api/iphone/ > /tmp/vpngate.txt
 
 cat /tmp/vpngate.txt | grep Japan | grep -v Academic | cut -f15 -d"," |  awk NR==${num} > /tmp/jp.coded
 
-base64 -d /tmp/jp.coded > /tmp/jp.ovpn >/dev/null 2>&1
+base64 -id /tmp/jp.coded > /tmp/jp.ovpn
 dos2unix /tmp/jp.ovpn >/dev/null 2>&1
 
 sed -i '/persist-tun/d' /tmp/jp.ovpn
