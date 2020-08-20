@@ -1,6 +1,7 @@
 #! /bin/bash
+pid=$(ps -aux | grep jp.ovpn |grep -v grep |awk '!/#/{printf$2"\n"}')
 num=$1
-killall openvpn >/dev/null 2>&1
+kill -9 $pid
 rm -rf /tmp/jp.ovpn /tmp/vpngate.txt
 setup_config(){
 curl http://www.vpngate.net/api/iphone/ > /tmp/vpngate.txt
