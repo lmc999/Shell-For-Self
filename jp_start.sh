@@ -22,7 +22,7 @@ up /etc/openvpn/jp_up.sh
 script-security 2
 reneg-sec 0" >> /tmp/jp.ovpn
 
-nohup openvpn --config /tmp/jp.ovpn >/dev/null 2>&1 &
+nohup openvpn --config /tmp/jp.ovpn &
 }
 
 
