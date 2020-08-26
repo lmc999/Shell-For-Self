@@ -4,35 +4,25 @@ num=$1
 kill -9 $pid
 rm -rf /tmp/tw.ovpn
 setup_config(){
-cat /etc/openvpn/tw/tw$num.ovpn >> /tmp/tw.ovpn
+server=$(curl https://freevpn.gg/s/TW | grep 'href="/c/'| awk '!/#/{printf$9"\n"}' | cut -f2 -d'"' | awk NR==${num})
 
+
+curl https://freevpn.gg${server}/udp >> /tmp/tw.ovpn
 
 sed -i '/persist-tun/d' /tmp/tw.ovpn
 
-echo "route-nopull
+echo "pull-filter ignore redirect-gateway
 route 10.211.0.0 255.255.0.0
-dev tun2
-log-append /tmp/openvpn2.log
+dev tun1
+log-append /tmp/openvpn.log
 up /etc/openvpn/tw_up.sh
 script-security 2
 reneg-sec 0" >> /tmp/tw.ovpn
 
-nohup openvpn --config /tmp/tw.ovpn >/dev/null 2>&1 &
+nohup openvpn --config /tmp/tw.ovpn &
 }
 
-make_script(){
-sleep 5
-ip route add default via $(ip addr show tun2 | grep inet | awk '{print $4}' | cut -f1 -d"/" | awk 'NR==1') dev tun2 table taiwan
-
-
-}
 
 setup_config
-make_script
-iptables -A INPUT -i tun2 -j ACCEPT
-iptables -A FORWARD -i tun2 -j ACCEPT
-
-
-
-
-cat /etc/openvpn/tw/tw${num}.ovpn >> /tmp/tw.ovpn
+iptables -A INPUT -i tun1 -j ACCEPT
+iptables -A FORWARD -i tun1 -j ACCEPT
