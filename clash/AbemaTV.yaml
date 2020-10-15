@@ -11,6 +11,7 @@ payload:
   - DOMAIN-SUFFIX,hayabusa.io
   - DOMAIN-SUFFIX,hayabusa.media
   - DOMAIN-SUFFIX,bucketeer.jp
+  - DOMAIN,api.abema.io
   - DOMAIN,abema.adx.promo
   - DOMAIN,abematv.akamaized.net
   - DOMAIN,ds-glb-linear-abematv.akamaized.net
