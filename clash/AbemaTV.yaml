@@ -9,4 +9,10 @@ payload:
   - DOMAIN-SUFFIX,abema.tv
   - DOMAIN-SUFFIX,ameba.jp
   - DOMAIN-SUFFIX,hayabusa.io
+  - DOMAIN-SUFFIX,hayabusa.media
   - DOMAIN-SUFFIX,bucketeer.jp
+  - DOMAIN,abema.adx.promo
+  - DOMAIN,abematv.akamaized.net
+  - DOMAIN,ds-glb-linear-abematv.akamaized.net
+  - DOMAIN,ds-linear-abematv.akamaized.net
+  - DOMAIN,ds-vod-abematv.akamaized.net
