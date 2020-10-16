@@ -11,10 +11,10 @@ payload:
   - DOMAIN-SUFFIX,hayabusa.io
   - DOMAIN-SUFFIX,hayabusa.media
   - DOMAIN-SUFFIX,bucketeer.jp
+  - DOMAIN-SUFFIX,theoplayer.com  
   - DOMAIN,api.abema.io
   - DOMAIN,abema.adx.promo
   - DOMAIN,abematv.akamaized.net
   - DOMAIN,ds-glb-linear-abematv.akamaized.net
   - DOMAIN,ds-linear-abematv.akamaized.net
   - DOMAIN,ds-vod-abematv.akamaized.net
-  - DOMAIN,licensing.theoplayer.com
