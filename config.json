@@ -10,16 +10,16 @@
       "Timeout": 6,
       "EDNSClientSubnet": {
         "Policy": "manual",
-        "ExternalIP": "212.64.18.1",
+        "ExternalIP": "119.129.50.1",
         "NoCookie": false
       }
     }
   ],
   "AlternativeDNS": [
     {
-      "Name": "Google",
-      "Address": "8.8.8.8:53",
-      "Protocol": "udp",
+      "Name": "OpenDNS",
+      "Address": "208.67.222.222:443",
+      "Protocol": "tcp",
       "SOCKS5Address": "",
       "Timeout": 6,
       "EDNSClientSubnet": {
@@ -50,6 +50,6 @@
   },
   "MinimumTTL": 0,
   "DomainTTLFile" : "/etc/overture/domain_ttl_sample",
-  "CacheSize" : 0,
+  "CacheSize" : 5000,
   "RejectQType": [255]
 }
