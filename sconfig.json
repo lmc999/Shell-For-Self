@@ -1,5 +1,5 @@
 {
-  "BindAddress": ":54",
+  "BindAddress": ":53",
   "DebugHTTPAddress": "127.0.0.1:5555",
   "PrimaryDNS": [
     {
