@@ -10,7 +10,7 @@
       "Timeout": 6,
       "EDNSClientSubnet": {
         "Policy": "manual",
-        "ExternalIP": "1.2.3.4",
+        "ExternalIP": "1.2.3.4/32",
         "NoCookie": false
       }
     }
@@ -29,7 +29,7 @@
       }
     }
   ],
-  "OnlyPrimaryDNS": ture,
+  "OnlyPrimaryDNS": false,
   "IPv6UseAlternativeDNS": false,
   "AlternativeDNSConcurrent": false,
   "PoolIdleTimeout": 15,
