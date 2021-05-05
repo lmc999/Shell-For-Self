@@ -9,6 +9,8 @@
 
 > bash <(curl -L -s https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/trace.sh)
 
+> bash <(curl -L -s https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/speedtest.sh)
+
 > bash <(curl -L -s https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/tcping.sh)
 
 > bash <(curl -L -s https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/iptables-rules.sh)
