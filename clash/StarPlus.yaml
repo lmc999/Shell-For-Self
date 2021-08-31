@@ -1,0 +1,18 @@
+payload:
+# 内容：Star+
+DOMAIN-SUFFIX, starplus.com
+DOMAIN-SUFFIX, star.api.edge.bamgrid.com
+DOMAIN-SUFFIX, bam-sdk-configs.bamgrid.com
+DOMAIN-SUFFIX, star.content.edge.bamgrid.com
+DOMAIN-SUFFIX, star.playback.edge.bamgrid.com
+DOMAIN-SUFFIX, playback-certs.bamgrid.com
+DOMAIN-SUFFIX, c.go-mpulse.net
+DOMAIN-SUFFIX, cdn.registerdisney.go.com
+DOMAIN-SUFFIX, sdk.iad-03.braze.com
+DOMAIN-SUFFIX, prod-static.disney-plus.net
+DOMAIN-SUFFIX, test-static.disney-plus.net
+DOMAIN-SUFFIX, prod-ripcut-delivery.disney-plus.net
+DOMAIN-SUFFIX, stags.bluekai.com
+DOMAIN-SUFFIX, cache.agilebits.com
+DOMAIN-SUFFIX, conviva.com
+DOMAIN-SUFFIX, media.starott.com
