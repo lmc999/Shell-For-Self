@@ -2,8 +2,11 @@
 yum install wget -y
 yum install unzip -y
 yum install mtr -y
-wget -O ./besttrace https://raw.githubusercontent.com/lmc999/Shell-For-Self/master/besttrace
-chmod +x besttrace
+wget -O /tmp/besttrace.zip https://cdn.ipip.net/17mon/besttrace4linux.zip
+unzip -d /tmp /tmp/besttrace.zip
+mv /tmp/besttrace ~/besttrace
+chmod +x ~/besttrace
+rm -rf /tmp/besttrace*
 wget -O ./worsttrace https://pkg.wtrace.app/linux/worsttrace
 chmod +x worsttrace
 wget https://github.com/zu1k/nali/releases/download/v0.2.2/nali-linux-amd64-v0.2.2.gz
