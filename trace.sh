@@ -1,7 +1,5 @@
 #! /bin/bash
-yum install wget -y
-yum install unzip -y
-yum install mtr -y
+apt install unzip -y
 wget -O /tmp/besttrace.zip https://cdn.ipip.net/17mon/besttrace4linux.zip
 unzip -d /tmp /tmp/besttrace.zip
 mv /tmp/besttrace ~/besttrace
