@@ -8,3 +8,5 @@ iptables -t mangle -X
 iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
+ufw disable --now
+apt-get purge netfilter-persistent
